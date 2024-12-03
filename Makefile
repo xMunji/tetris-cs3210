@@ -3,7 +3,7 @@ ssrc = $(wildcard src/*.s)
 dataobj = data/scorescr.o data/namescr.o
 obj = $(src:.c=.o) $(ssrc:.s=.o) $(dataobj)
 dep = $(src:.c=.d)
-name = gbatris
+name = gsuTetris3210
 elf = $(name).elf
 bin = $(name).gba
 
@@ -18,11 +18,12 @@ EMU = vbam
 opt = -O1 -fomit-frame-pointer -mcpu=arm7tdmi -mtune=arm7tdmi -mthumb -mthumb-interwork
 #dbg = -g
 
+
 CFLAGS = $(opt) $(dbg) -pedantic -Wall
 ASFLAGS = -mthumb-interwork
 LDFLAGS = -mthumb -mthumb-interwork
 EMUFLAGS = -T 100 -f 1 --agb-print
-
+CFLAGS += -fcommon
 IMG2TILES = tools/img2tiles/img2tiles
 
 
