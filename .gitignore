@@ -1,0 +1,6 @@
+*.o
+*.d
+*.swp
+*.elf
+*.gba
+tools/img2tiles/img2tiles
