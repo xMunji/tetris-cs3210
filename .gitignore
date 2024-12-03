@@ -3,4 +3,5 @@
 *.swp
 *.elf
 *.gba
+data/
 tools/img2tiles/img2tiles
